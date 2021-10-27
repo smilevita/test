@@ -713,50 +713,50 @@
  </div>
     <input name="animation" type="hidden">
   
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
 
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 
 
-<div id="error-message"></div>
+    <div id="error-message"></div>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_test_51JopbqJSnGxOH8zK1f7UjtaQJlKNUZbVgqOP8r0pODuNJ4Mxvq66mgFuTgE2Q7keUKx0d5FTahRn2qddbQVl5t9200tI7QrKrN');
+    <script>
+    (function() {
+    var stripe = Stripe('pk_test_51JopbqJSnGxOH8zK1f7UjtaQJlKNUZbVgqOP8r0pODuNJ4Mxvq66mgFuTgE2Q7keUKx0d5FTahRn2qddbQVl5t9200tI7QrKrN');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1Jp80dJSnGxOH8zKJND6rwur');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1Jp80dJSnGxOH8zKJND6rwur', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: 'https://smilevita.github.io/test/success',
-      cancelUrl: 'https://smilevita.github.io/test/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
+    var checkoutButton = document.getElementById('checkout-button-price_1Jp80dJSnGxOH8zKJND6rwur');
+    checkoutButton.addEventListener('click', function () {
         /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
+        * When the customer clicks on the button, redirect
+        * them to Checkout.
+        */
+        stripe.redirectToCheckout({
+        lineItems: [{price: 'price_1Jp80dJSnGxOH8zKJND6rwur', quantity: 1}],
+        mode: 'payment',
+        /*
+        * Do not rely on the redirect to the successUrl for fulfilling
+        * purchases, customers may not always reach the success_url after
+        * a successful payment.
+        * Instead use one of the strategies described in
+        * https://stripe.com/docs/payments/checkout/fulfill-orders
+        */
+        successUrl: 'https://smilevita.github.io/test/success',
+        cancelUrl: 'https://smilevita.github.io/test/canceled',
+        })
+        .then(function (result) {
+        if (result.error) {
+            /*
+            * If `redirectToCheckout` fails due to a browser or network
+            * error, display the localized error message to your customer.
+            */
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+        }
+        });
     });
-  });
-})();
-</script>
+    })();
+    </script>
 
 
 </body>
