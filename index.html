@@ -27,16 +27,16 @@
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPG71T7PM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-JRPG71T7PM');
-  </script>
   
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPG71T7PM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-JRPG71T7PM');
+    </script>  
   
   
 </head>
@@ -187,8 +187,11 @@
                         <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>(</strong><strong>ブランディング）</strong></h6>
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">会社PRに使用すると<br>堅苦しい説明もわかりやすく説明することができます。</p>
                     </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary display-7" target="_blank">Read More
-                            &gt;</a></div>
+                    <div class="mbr-section-btn item-footer mt-2">
+                        <button type="button"  class="btn item-btn btn-primary display-7" target="_blank" id="checkout-button-price_1Jp80dJSnGxOH8zKJND6rwur">
+                            購入
+                        &gt;</button>
+                    </div>
                 </div>
             </div>
             <div class="item features-image сol-12 col-md-6 col-lg-4">
@@ -201,8 +204,11 @@
                         <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>(e-learning)</strong></h6>
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">社内教育で動画を利用し時間に縛られず効率的に学ぶことが可能になります。</p>
                     </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Read More
-                            &gt;</a></div>
+                    <div class="mbr-section-btn item-footer mt-2">
+                        <button type="button" class="btn btn-primary item-btn display-7" target="_blank" id="checkout-button-price_1Jp80dJSnGxOH8zKJND6rwur">
+                            購入
+                        &gt;</button>
+                    </div>
                 </div>
             </div>
             <div class="item features-image сol-12 col-md-6 col-lg-4">
@@ -215,8 +221,11 @@
                         <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>（広告・CM）</strong></h6>
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">商品やサービス内容の概念を説明するにはアニメーション動画が最適です。</p>
                     </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn btn-primary item-btn display-7" target="_blank">Read More
-                            &gt;</a></div>
+                    <div class="mbr-section-btn item-footer mt-2">
+                        <button type="button" class="btn btn-primary item-btn display-7" target="_blank" id="checkout-button-price_1Jp80dJSnGxOH8zKJND6rwur">
+                            購入
+                        &gt;</button>
+                    </div>
                 </div>
             </div>
 
@@ -703,19 +712,12 @@
     <img class="original" src="assets\images\c-choju51-0023-s512-choju51-0023-10-128x134-min.png" alt="">
  </div>
     <input name="animation" type="hidden">
- 
+  
 <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-  id="checkout-button-price_1Jp80dJSnGxOH8zKJND6rwur"
-  role="link"
-  type="button"
->
-  Checkout
-</button>
+
 
 <div id="error-message"></div>
 
@@ -754,6 +756,8 @@
     });
   });
 })();
-</script>      
-      </body>
+</script>
+
+
+</body>
 </html>
